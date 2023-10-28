@@ -1,0 +1,177 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Design Tokens */
+
+:root {
+  --main-bg-color: hsl(245, 63%, 61%);
+  --secondary-bg-color: hsl(223, 18%, 27%);
+  --text-light: hsl(0, 0%, 100%, 1);
+  --border-bg-color: hsla(0, 0%, 100%, 0.3);
+  --alternative-bg-color: hsl(116, 63%, 61%);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--secondary-bg-color);
+}
+
+.container {
+  height: 100vh;
+}
+
+/* Layout */
+
+.main-display {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 320px);
+}
+
+.main-display .actualcount {
+  display: flex;
+  height: 100%;
+  padding: var(--space-4) var(--space-3);
+  align-items: flex-end;
+}
+
+.main-display .lastcount {
+  display: flex;
+  height: 72px;
+  gap: var(--space-2);
+}
+
+.main-display .lastcount-title {
+  display: flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  width: 120px;
+}
+
+.main-display .lastcount .lastcount-value {
+  display: flex;
+  align-items: center;
+  padding-inline: var(--space-2);
+  gap: var(--space-1);
+  height: 100%;
+}
+
+.main-display .actualcount h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+p {
+  font-weight: 300;
+}
+
+.counter-pad {
+  display: flex;
+  min-height: 320px;
+}
+
+.btn-counter {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-counter .btn-add,
+.btn-counter .btn-minus {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-save {
+  display: flex;
+  width: 100%;
+  padding: var(--space-4);
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.btn-save button {
+  display: flex;
+  padding: var(--space-2) var(--space-3);
+}
+
+/* Design */
+
+.main-display .actualcount {
+  background-color: var(--main-bg-color);
+  color: var(--text-light);
+}
+
+.main-display .lastcount-title {
+  background-color: var(--alternative-bg-color);
+  line-height: 130%;
+}
+
+.counter-pad {
+  background-color: var(--secondary-bg-color);
+  color: var(--text-light);
+}
+
+.btn-counter .btn-add {
+  border-right: 1px solid var(--border-bg-color);
+  border-bottom: 1px solid var(--border-bg-color);
+}
+.btn-counter .btn-minus {
+  border-right: 1px solid var(--border-bg-color);
+}
+
+.btn-save button {
+  background-color: var(--secondary-bg-color);
+  border-color: var(--border-bg-color);
+  color: var(--text-light);
+  border-style: solid;
+  font-weight: 300;
+}
