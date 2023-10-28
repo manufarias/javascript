@@ -60,6 +60,7 @@ h6 {
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--secondary-bg-color);
+  padding-top: env(safe-area-inset-top, 20px);
 }
 
 .container {
