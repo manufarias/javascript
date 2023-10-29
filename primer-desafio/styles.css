@@ -161,14 +161,18 @@ p {
   color: var(--text-light);
 }
 
-.btn-counter .btn-add {
-  border-right: 1px solid var(--border-bg-color);
-  border-bottom: 1px solid var(--border-bg-color);
+hr {
+  color: var(--border-bg-color);
 }
+.btn-counter .btn-add,
 .btn-counter .btn-minus {
-  border-right: 1px solid var(--border-bg-color);
+  border: none;
+  background-color: var(--secondary-bg-color);
 }
 
+.btn-save {
+  border-left: 1px solid var(--border-bg-color);
+}
 .btn-save button {
   background-color: var(--secondary-bg-color);
   border-color: var(--border-bg-color);

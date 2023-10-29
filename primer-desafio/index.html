@@ -31,14 +31,14 @@
         <div class="lastcount">
           <div class="lastcount-title"><p>Última cuenta</p></div>
           <div class="lastcount-value">
-            <p>0</p>
+            <p id="save-el">0</p>
             <p>personas</p>
           </div>
         </div>
       </div>
       <div class="counter-pad">
         <div class="btn-counter">
-          <div class="btn-add" onclick="increment()">
+          <button class="btn-add" onclick="increment()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -53,8 +53,9 @@
                 fill="white"
               />
             </svg>
-          </div>
-          <div class="btn-minus" onclick="decrement() ">
+          </button>
+          <hr />
+          <button class="btn-minus" onclick="decrement() ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -67,9 +68,9 @@
                 fill="white"
               />
             </svg>
-          </div>
+          </button>
         </div>
-        <div class="btn-save">
+        <div class="btn-save" onclick="save()">
           <button>Guardar cuenta</button>
         </div>
       </div>
